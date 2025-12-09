@@ -27,13 +27,35 @@ export interface Step {
 
 export interface CaseStudy {
   id: number;
+  slug: string;
   client: string;
+  industry: string;
+  services: string[];
   challenge: string;
   solution: string;
   results: string[];
   image: string;
   testimonial: string;
   testimonialAuthor: string;
+  // Detailed fields
+  overview?: string;
+  painPointsSolved?: string[];
+  userPersonas?: string[];
+  marketSize?: {
+    tam: string;
+    sam: string;
+    som: string;
+  };
+  techStack?: {
+    frontend?: string;
+    backend?: string;
+    integrations?: string;
+    other?: string;
+  };
+  buildTimeline?: string; // or detailed
+  resourcesNeeded?: string;
+  analyticsSetup?: string;
+  marketingEfforts?: string;
 }
 
 export interface Differentiator {

@@ -196,7 +196,10 @@ export const PROCESS_STEPS: Step[] = [
 export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 1,
+    slug: "liquidity-io",
     client: "Liquidity.io",
+    industry: "Marketing Technology & Content Automation",
+    services: ["Full-Stack Development", "AI Automation", "Product Strategy"],
     challenge: "Needed a complete platform for content & marketing automation.",
     solution: "Full-stack web application with lead gen tools, SEO blog systems, social media management, and document workflows.",
     results: [
@@ -205,13 +208,41 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Marketing Automation",
       "Full-stack Web App"
     ],
-    image: "https://picsum.photos/800/600?random=1",
+    image: "/assets/banner/liquidityio_banner.png",
     testimonial: "Working with ZenithLabs felt like having an extension of our own team. They understood our vision immediately.",
-    testimonialAuthor: "Product Lead, Liquidity.io"
+    testimonialAuthor: "Product Lead, Liquidity.io",
+    overview: "Liquidity.io is a digital marketplace and regulated ATS focused on giving investors access to private-market instruments with real-time tracking, price alerts and compliance-first flows. The product positions itself as a mobile-first, institutional-grade platform for secondary trading in private assets.",
+    painPointsSolved: [
+      "Liquidity and price discovery in illiquid private assets",
+      "Compliance, onboarding and accredited-investor management for regulated secondary trades",
+      "Real-time portfolio visibility and alerts"
+    ],
+    userPersonas: [
+      "High-net-worth individuals and family offices seeking exposure to pre-IPO/private assets",
+      "Institutional allocators and funds executing secondary trades or private credit allocations",
+      "Company founders/insiders needing an orderly secondary execution channel"
+    ],
+    marketSize: {
+      tam: "$12–22T (Global private markets AUM)",
+      sam: "$300B–$1T (Secondary markets for private company stock + private credit)",
+      som: "$1B–$10B (Initial near-term market capture)"
+    },
+    techStack: {
+      frontend: "React / React Native (mobile), Next.js",
+      backend: "Node.js / Python services, PostgreSQL, Redis",
+      integrations: "Payment/wire rails, KYC/AML providers, custody/transfer agents, SEC/regulatory integrations"
+    },
+    buildTimeline: "Core MVP (order book, onboarding, compliance): 6–10 months. Fully regulated product: 12–24 months.",
+    resourcesNeeded: "Team: 2–3 backend, 2 frontend/mobile, 1–2 ML/data, 1 compliance lead, 1 PM, 1–2 designers.",
+    analyticsSetup: "Segment/Snowplow for events, Mixpanel/Amplitude for product, GA for marketing. KPIs: active traders, volume, settlement time.",
+    marketingEfforts: "Content (blog), LinkedIn/X presence, app store listing, PR & thought leadership aimed at institutional channels."
   },
   {
     id: 2,
+    slug: "berryflow-io",
     client: "BerryFlow.io",
+    industry: "SaaS & Marketing Technology",
+    services: ["Web Development", "AI Integration", "Growth Strategy"],
     challenge: "Marketers needed to move faster with content creation.",
     solution: "End-to-end content automation platform with intelligent workflows, document libraries, and creative tools.",
     results: [
@@ -220,13 +251,41 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Intelligent Workflows",
       "Streamlined Ops"
     ],
-    image: "https://picsum.photos/800/600?random=2",
+    image: "/assets/banner/berryflowio_banner.png",
     testimonial: "The AI automation they built saved us 20+ hours per week. It paid for itself in the first month.",
-    testimonialAuthor: "Marketing Director, BerryFlow"
+    testimonialAuthor: "Marketing Director, BerryFlow",
+    overview: "Berry provides an AI-powered Customer Success platform (AI CSM) that automates onboarding, support, training, and internal co-pilot functions to scale post-sales operations without proportional headcount increases.",
+    painPointsSolved: [
+      "Scaling white-glove onboarding and support without hiring more CSMs",
+      "Knowledge retention and consistent execution of CS playbooks",
+      "Ticket deflection and training at scale"
+    ],
+    userPersonas: [
+      "VP/Head of Customer Success in enterprise SaaS companies",
+      "CS managers wanting to reduce time-to-value and improve NRR",
+      "Product teams seeking to reduce support overhead"
+    ],
+    marketSize: {
+      tam: "$5–15B+ (Global customer success & post-sales software market)",
+      sam: "$500M–$2B (AI CSM platforms for mid-to-large SaaS)",
+      som: "$5–50M (Initial enterprise deployments)"
+    },
+    techStack: {
+      frontend: "React/Next.js",
+      backend: "Node/Python",
+      integrations: "Vector DB (Pinecone/Weaviate), LLM orchestration, Zendesk/Gainsight integrations"
+    },
+    buildTimeline: "Product MVP: 4–8 months. Enterprise-grade security & workflows: 9–18 months.",
+    resourcesNeeded: "3–5 backend, 2 frontend, 2 ML/AI, 1 pre-sales, 1 product, 1 designer.",
+    analyticsSetup: "Product analytics (deflection), CS metrics (TTV, NRR), integration dashboards.",
+    marketingEfforts: "Enterprise demo/bookings, content for CS leaders, outbound/partnerships with CRM vendors."
   },
   {
     id: 3,
+    slug: "marchain-io",
     client: "Marchain.io",
+    industry: "Blockchain & Web3",
+    services: ["Technical Development", "Strategic Partnership", "Infrastructure"],
     challenge: "Requires robust blockchain infrastructure and web3 solutions.",
     solution: "Strategic partnership delivering technical development and next-gen decentralized applications.",
     results: [
@@ -235,13 +294,40 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Strategic Partnership",
       "Decentralized Apps"
     ],
-    image: "https://picsum.photos/800/600?random=3",
+    image: "/assets/banner/marchainio_banner.png",
     testimonial: "From strategy to deployment, they handled everything. Best decision we made for our product.",
-    testimonialAuthor: "CTO, Marchain.io"
+    testimonialAuthor: "CTO, Marchain.io",
+    overview: "Marchain.io is a product-building and growth platform focused on helping entrepreneurs build products fast: weekly insights, no-code tools, 1:1 guidance, automation services and courses for founders and builders.",
+    painPointsSolved: [
+      "Slow product discovery & execution for founders",
+      "Confusion over tool selection and no-code automation",
+      "Need for mentorship and execution templates"
+    ],
+    userPersonas: [
+      "Early founders & solo entrepreneurs wanting fast prototyping",
+      "Product managers seeking templates and coaching",
+      "Small agencies and solopreneurs who want automation"
+    ],
+    marketSize: {
+      tam: "$20–60B (Global online learning / creator economy)",
+      sam: "$500M–$2B (Founders/product professionals in English markets + India)",
+      som: "₹5–50M INR (Niche premium newsletter/coaching)"
+    },
+    techStack: {
+      frontend: "Next.js / static site / Substack",
+      other: "Gumroad/Stripe, Zapier/Make/n8n for automations"
+    },
+    buildTimeline: "Basic presence: 2–6 weeks. Automation services & courses: 2–6 months.",
+    resourcesNeeded: "1–2 dev/automation engineers, content creator, community manager, designer.",
+    analyticsSetup: "Newsletter metrics, Google Analytics, cohort retention.",
+    marketingEfforts: "Content marketing (blog), Instagram presence, productized services, 1:1 guidance upsells."
   },
   {
     id: 4,
+    slug: "definable-ai",
     client: "Definable.ai",
+    industry: "AI & Analytics",
+    services: ["AI Implementation", "Product Development", "Data Engineering"],
     challenge: "Turning raw data into actionable business insights.",
     solution: "AI-powered platform enabling smarter business decisions through intelligent data analysis.",
     results: [
@@ -250,13 +336,41 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Actionable Insights",
       "Business Intelligence"
     ],
-    image: "https://picsum.photos/800/600?random=4",
+    image: "/assets/banner/definableai_banner.png",
     testimonial: "Transformed how we look at our data. The insights are now instant and accurate.",
-    testimonialAuthor: "Founder, Definable.ai"
+    testimonialAuthor: "Founder, Definable.ai",
+    overview: "Definable.ai is an India-built AI agents/platform that aggregates access to multiple LLMs and AI tools in one workspace — chat, agents, multimodal creation, knowledge bases and model switching inside a single UI.",
+    painPointsSolved: [
+      "Model fragmentation (users juggling ChatGPT, Claude, etc.)",
+      "Subscription fatigue and tooling sprawl",
+      "Need for knowledge-base integration and agent orchestration"
+    ],
+    userPersonas: [
+      "AI-savvy product teams and founders",
+      "Educators and non-profits",
+      "Enterprises wanting multi-model fallbacks"
+    ],
+    marketSize: {
+      tam: "$20–60B (Global developer & enterprise AI tooling)",
+      sam: "$1–5B (Multi-model agent platforms for startups)",
+      som: "$5–50M (Initial target)"
+    },
+    techStack: {
+      frontend: "React + Next.js",
+      backend: "Node.js/Express or Python FastAPI",
+      integrations: "OpenAI/Anthropic/Meta/Gemini APIs, Vector DB (Pinecone/Weaviate)"
+    },
+    buildTimeline: "Seed MVP: 3–6 months. Agents/Enterprise features: 6–12 months.",
+    resourcesNeeded: "2–4 backend, 1–2 MLOps, 2 frontend, 1 designer, 1 growth/ops.",
+    analyticsSetup: "Mixpanel/Amplitude, API usage metrics, billing dashboards.",
+    marketingEfforts: "Content + blog, demo bookings, freemium model, LinkedIn/Instagram presence."
   },
   {
     id: 5,
+    slug: "arthik-money",
     client: "Arthik.money",
+    industry: "Fintech & Personal Finance",
+    services: ["Full-Stack Development", "Financial Integrations", "UX Design"],
     challenge: "Users needed a better way to manage personal logistics and finances.",
     solution: "Full web application with financial tools and integrations for smarter money management.",
     results: [
@@ -267,7 +381,32 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     image: "https://picsum.photos/800/600?random=5",
     testimonial: "A seamless experience for our users. The platform is robust and secure.",
-    testimonialAuthor: "CEO, Arthik.money"
+    testimonialAuthor: "CEO, Arthik.money",
+    overview: "Arthik.money is an AI-powered personal expense and budget manager that auto-categorizes transactions, offers smart savings advice and an AI assistant chat for finance queries.",
+    painPointsSolved: [
+      "Manual expense tracking and poor visibility",
+      "Lack of actionable saving recommendations",
+      "Friction in connecting bank transactions"
+    ],
+    userPersonas: [
+      "Salaried individuals and young professionals",
+      "Small business owners/micro-entrepreneurs",
+      "Users in India seeking localised recommendations"
+    ],
+    marketSize: {
+      tam: "$10–40B (Global personal finance app market)",
+      sam: "$500M–$2B (India-centric personal finance app market)",
+      som: "$1–10M (Early traction in India)"
+    },
+    techStack: {
+      frontend: "React Native or Flutter (Mobile)",
+      backend: "Node.js/Python, PostgreSQL",
+      integrations: "Banking aggregation, ML for categorization"
+    },
+    buildTimeline: "MVP: 3–6 months. Bank integrations: 6–12 months.",
+    resourcesNeeded: "2 mobile devs, 2 backend, 1 ML, 1 security, 1 designer, 1 product.",
+    analyticsSetup: "Amplitude/Mixpanel, Sentry, Business dashboards (Metabase).",
+    marketingEfforts: "Beta program, app store listing, referral incentives, social campaigns."
   }
 ];
 
