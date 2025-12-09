@@ -1,23 +1,35 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import React, { useState } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Mail, Phone, Calendar, ArrowRight, Loader2 } from 'lucide-react';
+import { useFormState, useFormStatus } from 'react-dom';
+import { submitProjectForm } from '../actions';
+
+function ContactSubmitButton() {
+    const { pending } = useFormStatus();
+    return (
+        <button
+            type="submit"
+            disabled={pending}
+            className="w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-gray-800 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100 flex items-center justify-center gap-2"
+        >
+            {pending ? (
+                <>
+                    <Loader2 size={20} className="animate-spin" /> Sending...
+                </>
+            ) : (
+                "Start the Conversation"
+            )}
+        </button>
+    );
+}
 
 export default function ContactPage() {
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitted, setSubmitted] = useState(false);
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        // Simulate API call
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setSubmitted(true);
-        }, 1500);
-    };
+    const [state, formAction] = useFormState(submitProjectForm, { success: false, message: null });
 
     return (
         <div className="bg-white text-gray-900 font-sans selection:bg-accent selection:text-black">
@@ -83,35 +95,40 @@ export default function ContactPage() {
 
                         {/* Form */}
                         <div className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-gray-100 shadow-2xl">
-                            {submitted ? (
+                            {state.success ? (
                                 <div className="h-full flex flex-col items-center justify-center text-center py-20">
                                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-6">
                                         <ArrowRight size={40} className="-rotate-45" />
                                     </div>
                                     <h3 className="text-3xl font-black mb-4">Message Sent!</h3>
-                                    <p className="text-gray-500 max-w-sm">Thanks for reaching out. We'll get back to you within 24 hours with next steps.</p>
-                                    <button onClick={() => setSubmitted(false)} className="mt-8 font-bold text-sm underline text-gray-400 hover:text-black">Send another message</button>
+                                    <p className="text-gray-500 max-w-sm">{state.message}</p>
+                                    <a href="/contact" className="mt-8 font-bold text-sm underline text-gray-400 hover:text-black">Send another message</a>
                                 </div>
                             ) : (
-                                <form onSubmit={handleSubmit} className="space-y-6">
+                                <form action={formAction} className="space-y-6">
+                                    {state.message && !state.success && (
+                                        <div className="bg-red-50 text-red-600 p-4 rounded-xl text-sm font-bold">
+                                            {state.message}
+                                        </div>
+                                    )}
                                     <div>
                                         <label className="block text-sm font-bold text-gray-700 mb-2">Name*</label>
-                                        <input required type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors" placeholder="Your name" />
+                                        <input required name="name" type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors" placeholder="Your name" />
                                     </div>
 
                                     <div>
                                         <label className="block text-sm font-bold text-gray-700 mb-2">Email*</label>
-                                        <input required type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors" placeholder="name@company.com" />
+                                        <input required name="email" type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors" placeholder="name@company.com" />
                                     </div>
 
                                     <div>
                                         <label className="block text-sm font-bold text-gray-700 mb-2">Company/Project Name</label>
-                                        <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors" placeholder="Project name" />
+                                        <input name="company" type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors" placeholder="Project name" />
                                     </div>
 
                                     <div>
                                         <label className="block text-sm font-bold text-gray-700 mb-2">Which service are you interested in?*</label>
-                                        <select required className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors appearance-none">
+                                        <select required name="interest" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors appearance-none">
                                             <option value="">Select a service...</option>
                                             <option value="web-dev">Web Development</option>
                                             <option value="shopify">Shopify Development</option>
@@ -125,28 +142,16 @@ export default function ContactPage() {
 
                                     <div>
                                         <label className="block text-sm font-bold text-gray-700 mb-2">Tell us about your project*</label>
-                                        <textarea required rows={4} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors resize-none" placeholder="What are you looking to build?"></textarea>
+                                        <textarea required name="projectDetails" rows={4} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors resize-none" placeholder="What are you looking to build?"></textarea>
                                     </div>
 
                                     <div>
                                         <label className="block text-sm font-bold text-gray-700 mb-2">What's your timeline?</label>
-                                        <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors" placeholder="e.g. 1-2 months" />
+                                        <input name="timeline" type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-black transition-colors" placeholder="e.g. 1-2 months" />
                                     </div>
 
                                     <div className="pt-4">
-                                        <button
-                                            type="submit"
-                                            disabled={isSubmitting}
-                                            className="w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-gray-800 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100 flex items-center justify-center gap-2"
-                                        >
-                                            {isSubmitting ? (
-                                                <>
-                                                    <Loader2 size={20} className="animate-spin" /> Sending...
-                                                </>
-                                            ) : (
-                                                "Start the Conversation"
-                                            )}
-                                        </button>
+                                        <ContactSubmitButton />
                                         <p className="text-center text-xs text-gray-400 mt-4">
                                             Response Promise: We'll get back to you within 24 hours with next steps.
                                         </p>

@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-gray-100 text-xs font-bold text-gray-400 uppercase tracking-wider">
-          <p>© 2024 Zenitho Labs. All rights reserved.</p>
+          <p>© 2025 Zenitho Labs. All rights reserved.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-black">Privacy Policy</a>
             <a href="#" className="hover:text-black">Terms of Service</a>
