@@ -1,24 +1,36 @@
-import { 
-  MonitorX, 
-  Clock, 
-  HelpCircle, 
-  Rocket, 
-  Laptop, 
-  BrainCircuit, 
-  Layers, 
-  MessageSquare, 
-  FileText, 
-  Hammer, 
-  CheckCircle, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  DollarSign, 
-  UserCheck, 
+import {
+  MonitorX,
+  Clock,
+  HelpCircle,
+  Rocket,
+  Laptop,
+  BrainCircuit,
+  Layers,
+  MessageSquare,
+  FileText,
+  Hammer,
+  CheckCircle,
+  TrendingUp,
+  Target,
+  Zap,
+  DollarSign,
+  UserCheck,
   Puzzle,
   Search,
   BarChart,
-  Code
+  Code,
+  ShoppingBag,
+  Bot,
+  BookOpen,
+  LineChart,
+  Megaphone,
+  Eye,
+  Lightbulb,
+  Map,
+  Palette,
+  PenTool,
+  Workflow,
+  Users
 } from 'lucide-react';
 import { PainPoint, Service, Step, CaseStudy, Differentiator, Testimonial, PricingPackage, FAQItem } from './types';
 
@@ -53,44 +65,80 @@ export const SERVICES: Service[] = [
   {
     id: 1,
     icon: Laptop,
-    title: "Websites That Convert Visitors Into Customers",
-    description: "We build fast, beautiful, mobile-responsive websites tailored to your brand and business goals. No templates—every site is custom-designed to stand out and drive conversions.",
+    title: "Web Development",
+    description: "Modern, fast, and scalable web applications built with cutting-edge technology. We blend AI-assisted development with traditional coding excellence to deliver products that perform beautifully and scale effortlessly.",
     features: [
-      "Fully responsive design",
-      "SEO-optimized structure",
-      "Lightning-fast loading speeds",
-      "Easy-to-update CMS",
-      "Integrated analytics"
+      "Custom platforms",
+      "SaaS products",
+      "Enterprise dashboards",
+      "Complex web applications"
     ],
-    ctaText: "Explore Web Development"
+    ctaText: "Explore Web Dev"
   },
   {
     id: 2,
-    icon: BrainCircuit,
-    title: "Automate Tasks & Save 20+ Hours Per Week",
-    description: "Stop wasting time on repetitive work. We implement AI-powered automation to handle data entry, customer communication, scheduling, reporting, and more.",
+    icon: ShoppingBag,
+    title: "Shopify Development",
+    description: "Complete e-commerce solutions that convert visitors into customers. From stunning storefronts to custom integrations and automated workflows, we build Shopify stores that drive revenue.",
     features: [
-      "Custom chatbots for support",
-      "Automated email sequences",
-      "Data processing & reporting",
-      "Cross-platform workflow automation",
-      "CRM integrations"
+      "Online retailers",
+      "D2C brands",
+      "Physical product businesses",
+      "Custom themes & apps"
     ],
-    ctaText: "Discover AI Automation"
+    ctaText: "Explore Shopify"
   },
   {
     id: 3,
-    icon: Layers,
-    title: "End-to-End Solutions for Maximum Impact",
-    description: "Need both? We offer complete packages combining cutting-edge web development with intelligent automation—creating a seamless digital ecosystem for your business.",
+    icon: BrainCircuit,
+    title: "AI Automation Agents",
+    description: "Intelligent automation that works while you sleep. We build custom AI agents that handle repetitive tasks, customer support, data processing, and complex workflows—giving you superhuman efficiency.",
     features: [
-      "Comprehensive needs assessment",
-      "Integrated web + automation strategy",
-      "Ongoing optimization",
-      "Team training",
-      "Scalable infrastructure"
+      "Task automation",
+      "Customer support bots",
+      "Data processing",
+      "Workflow optimization"
     ],
-    ctaText: "Get Complete Solution"
+    ctaText: "Explore AI Agents"
+  },
+  {
+    id: 4,
+    icon: FileText,
+    title: "Product Documentation",
+    description: "Crystal-clear documentation that users actually read. We create comprehensive guides, API docs, knowledge bases, and technical content that empowers your users and reduces support tickets.",
+    features: [
+      "SaaS products",
+      "API platforms",
+      "Internal tools",
+      "Developer guides"
+    ],
+    ctaText: "Explore Docs"
+  },
+  {
+    id: 5,
+    icon: TrendingUp,
+    title: "Product Profitability Analysis",
+    description: "Strategic insights that de-risk your product journey. Before you invest months and money, we analyze market fit, competitive landscape, monetization models, and growth potential.",
+    features: [
+      "Pre-launch analysis",
+      "Product pivots",
+      "Feature validation",
+      "Market entry strategy"
+    ],
+    ctaText: "Analyze Vision"
+  },
+  {
+    id: 6,
+    icon: Rocket,
+    title: "Product Growth & Marketing",
+    description: "Data-driven strategies that compound your growth. From SEO and content marketing to conversion optimization and user acquisition, we implement systems that consistently bring qualified customers.",
+    features: [
+      "Post-launch growth",
+      "User acquisition",
+      "Market expansion",
+      "Scaling strategies"
+    ],
+    ctaText: "Boost Growth"
   }
 ];
 
@@ -98,90 +146,128 @@ export const PROCESS_STEPS: Step[] = [
   {
     id: 1,
     number: "01",
-    icon: MessageSquare,
-    title: "Free Consultation",
-    description: "We start with a no-pressure conversation to understand your business, challenges, and goals. We'll assess solutions and provide honest recommendations.",
-    timeline: "30-45 minutes"
+    icon: Eye,
+    title: "Vision",
+    description: "We start by understanding your big picture. What are you building? Why does it matter? Who is it for? We map out the initial concept.",
+    timeline: "Discovery"
   },
   {
     id: 2,
     number: "02",
-    icon: FileText,
-    title: "Transparent Proposal",
-    description: "You'll receive a detailed proposal with clear pricing, project timeline, deliverables, and success metrics. No hidden fees.",
-    timeline: "2-3 business days"
+    icon: Map,
+    title: "Strategy & Analysis",
+    description: "We dive deep into market fit, monetization, and technical feasibility. We de-risk the project before writing a single line of code.",
+    timeline: "Planning"
   },
   {
     id: 3,
     number: "03",
-    icon: Hammer,
-    title: "Build & Create",
-    description: "Our team brings your vision to life. You'll receive regular updates, preview links, and opportunities for feedback.",
-    timeline: "2-6 weeks"
+    icon: Palette,
+    title: "Design",
+    description: "Crafting the user experience and interface. We ensure the product is intuitive, beautiful, and aligned with your brand identity.",
+    timeline: "UX/UI"
   },
   {
     id: 4,
     number: "04",
-    icon: Rocket,
-    title: "Launch & Optimize",
-    description: "Before going live, we rigorously test everything. After launch, we provide training and monitor performance.",
-    timeline: "1 week"
+    icon: Code,
+    title: "Develop",
+    description: "Building the core product using modern tech stacks (Web, Shopify, or Custom). We blend AI tools with expert engineering.",
+    timeline: "Build"
   },
   {
     id: 5,
     number: "05",
-    icon: TrendingUp,
-    title: "Continued Partnership",
-    description: "We don't disappear after launch. You'll have access to ongoing support, maintenance, and optimization services.",
-    timeline: "Ongoing"
+    icon: Bot,
+    title: "Automate",
+    description: "Integrating AI agents and workflow automation to streamline operations and enhance product functionality.",
+    timeline: "Optimization"
+  },
+  {
+    id: 6,
+    number: "06",
+    icon: Rocket,
+    title: "Scale",
+    description: "Launching the product and shifting focus to growth marketing, user acquisition, and continuous optimization.",
+    timeline: "Growth"
   }
 ];
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 1,
-    client: "TechGear Pro - Electronics Retailer",
-    challenge: "Outdated website with 78% cart abandonment rate and poor mobile experience leading to declining sales.",
-    solution: "Complete website redesign with streamlined checkout, mobile-first approach, and integrated inventory management system.",
+    client: "Liquidity.io",
+    challenge: "Needed a complete platform for content & marketing automation.",
+    solution: "Full-stack web application with lead gen tools, SEO blog systems, social media management, and document workflows.",
     results: [
-      "156% increase in mobile conversions",
-      "Cart abandonment reduced to 34%",
-      "Page load time improved from 8s to 1.2s",
-      "$180K additional revenue in 3 months"
+      "All-in-one platform",
+      "12+ Integrated Features",
+      "Marketing Automation",
+      "Full-stack Web App"
     ],
     image: "https://picsum.photos/800/600?random=1",
-    testimonial: "The new website didn't just look better—it transformed our business. We're finally competing with the big players.",
-    testimonialAuthor: "Sarah M., Owner"
+    testimonial: "Working with ZenithLabs felt like having an extension of our own team. They understood our vision immediately.",
+    testimonialAuthor: "Product Lead, Liquidity.io"
   },
   {
     id: 2,
-    client: "Apex Consulting",
-    challenge: "Team spending 25+ hours weekly on client onboarding, scheduling, and report generation—limiting capacity.",
-    solution: "Implemented AI-powered chatbot for initial consultations, automated scheduling system, and report generation tools.",
+    client: "BerryFlow.io",
+    challenge: "Marketers needed to move faster with content creation.",
+    solution: "End-to-end content automation platform with intelligent workflows, document libraries, and creative tools.",
     results: [
-      "23 hours per week saved on admin",
-      "Onboarding time reduced by 85%",
-      "Capacity increased by 40%",
-      "ROI achieved in 6 weeks"
+      "AI Content Creation",
+      "SaaS Platform",
+      "Intelligent Workflows",
+      "Streamlined Ops"
     ],
     image: "https://picsum.photos/800/600?random=2",
-    testimonial: "We were skeptical about AI, but the results speak for themselves. It's like having three extra employees.",
-    testimonialAuthor: "Michael R., Ops Director"
+    testimonial: "The AI automation they built saved us 20+ hours per week. It paid for itself in the first month.",
+    testimonialAuthor: "Marketing Director, BerryFlow"
   },
   {
     id: 3,
-    client: "GreenLeaf Landscaping",
-    challenge: "No online presence, relying entirely on word-of-mouth. Missing opportunities and unable to compete with larger companies.",
-    solution: "Built SEO-optimized website with booking system, automated email marketing, and AI chatbot for 24/7 inquiries.",
+    client: "Marchain.io",
+    challenge: "Requires robust blockchain infrastructure and web3 solutions.",
+    solution: "Strategic partnership delivering technical development and next-gen decentralized applications.",
     results: [
-      "312% increase in qualified leads",
-      "60% of bookings now come through web",
-      "Google Maps ranking #2 locally",
-      "Hired 4 new team members to handle demand"
+      "Blockchain Infra",
+      "Web3 Solutions",
+      "Strategic Partnership",
+      "Decentralized Apps"
     ],
     image: "https://picsum.photos/800/600?random=3",
-    testimonial: "From invisible to unstoppable. Our phones haven't stopped ringing since the website launched.",
-    testimonialAuthor: "David K., Founder"
+    testimonial: "From strategy to deployment, they handled everything. Best decision we made for our product.",
+    testimonialAuthor: "CTO, Marchain.io"
+  },
+  {
+    id: 4,
+    client: "Definable.ai",
+    challenge: "Turning raw data into actionable business insights.",
+    solution: "AI-powered platform enabling smarter business decisions through intelligent data analysis.",
+    results: [
+      "Custom AI Implementation",
+      "Data Analysis",
+      "Actionable Insights",
+      "Business Intelligence"
+    ],
+    image: "https://picsum.photos/800/600?random=4",
+    testimonial: "Transformed how we look at our data. The insights are now instant and accurate.",
+    testimonialAuthor: "Founder, Definable.ai"
+  },
+  {
+    id: 5,
+    client: "Arthik.money",
+    challenge: "Users needed a better way to manage personal logistics and finances.",
+    solution: "Full web application with financial tools and integrations for smarter money management.",
+    results: [
+      "Fintech Platform",
+      "Web Application",
+      "Financial Tools",
+      "User Centric"
+    ],
+    image: "https://picsum.photos/800/600?random=5",
+    testimonial: "A seamless experience for our users. The platform is robust and secure.",
+    testimonialAuthor: "CEO, Arthik.money"
   }
 ];
 
@@ -227,25 +313,25 @@ export const DIFFERENTIATORS: Differentiator[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
-    quote: "Working with this team was the best decision we made this year. They took time to understand our business and delivered a website that's not only beautiful but actually brings in customers.",
-    name: "Jennifer Martinez",
-    position: "CEO, Martinez Marketing Group",
+    quote: "Working with ZenithLabs felt like having an extension of our own team. They understood our vision immediately and delivered beyond expectations.",
+    name: "Product Lead",
+    position: "Liquidity.io",
     image: "https://picsum.photos/100/100?random=10",
     rating: 5
   },
   {
     id: 2,
-    quote: "I was hesitant about AI automation, thinking it would be complicated. They made it incredibly simple and the ROI was immediate. We're saving 15+ hours per week.",
-    name: "Robert Chen",
-    position: "Ops Manager, TechFlow",
+    quote: "The AI automation they built saved us 20+ hours per week. It paid for itself in the first month.",
+    name: "Marketing Director",
+    position: "BerryFlow.io",
     image: "https://picsum.photos/100/100?random=11",
     rating: 5
   },
   {
     id: 3,
-    quote: "After bad experiences with two other agencies, I was skeptical. But these guys delivered exactly what they promised, on time and on budget.",
-    name: "Amanda Foster",
-    position: "Founder, Urban Wellness",
+    quote: "From strategy to deployment, they handled everything. Best decision we made for our product.",
+    name: "CTO",
+    position: "Marchain.io",
     image: "https://picsum.photos/100/100?random=12",
     rating: 5
   }

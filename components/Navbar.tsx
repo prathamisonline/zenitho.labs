@@ -19,21 +19,21 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
   }, []);
 
   const navLinks = [
-    { name: 'Work', href: '#portfolio' },
     { name: 'Services', href: '#services' },
-    { name: 'Culture', href: '#culture' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'Methodology', href: '#culture' }, // Process used id="culture" previously, I should probably check Process.tsx id. It was "culture".
+    { name: 'Work', href: '#portfolio' },
+    { name: 'Team', href: '#team' },
+    { name: 'Playground', href: '#interactive' },
   ];
 
   return (
     <>
       <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-        <nav 
-          className={`pointer-events-auto w-full max-w-4xl transition-all duration-300 rounded-full px-6 py-3 flex items-center justify-between ${
-            scrolled || isOpen 
-              ? 'bg-white/90 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100' 
+        <nav
+          className={`pointer-events-auto w-full max-w-4xl transition-all duration-300 rounded-full px-6 py-3 flex items-center justify-between ${scrolled || isOpen
+              ? 'bg-white/90 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100'
               : 'bg-white/70 backdrop-blur-md border border-white/50'
-          }`}
+            }`}
         >
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
@@ -82,7 +82,7 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="fixed inset-0 z-40 bg-white pt-32 px-6 md:hidden"
