@@ -1,4 +1,4 @@
-import React from 'react';
+import Link from 'next/link';
 import { ArrowUpRight, Star } from 'lucide-react';
 import { CASE_STUDIES } from '../constants';
 
@@ -14,14 +14,18 @@ const Portfolio: React.FC = () => {
               We've had the privilege of partnering with innovative companies across industries.
             </p>
           </div>
-          <a href="#contact" className="hidden md:flex items-center gap-2 font-bold text-lg hover:underline decoration-2 underline-offset-4">
+          <Link href="/case-studies" className="hidden md:flex items-center gap-2 font-bold text-lg hover:underline decoration-2 underline-offset-4">
             See all projects <ArrowUpRight size={20} />
-          </a>
+          </Link>
         </div>
 
         <div className="grid gap-x-8 gap-y-16 lg:grid-cols-2">
           {CASE_STUDIES.map((study, index) => (
-            <div key={study.id} className={`group ${index === 2 ? 'lg:col-span-2' : ''}`}>
+            <Link
+              href={`/case-studies/${study.slug}`}
+              key={study.id}
+              className={`group block ${index === 2 ? 'lg:col-span-2' : ''}`}
+            >
               <div className="relative overflow-hidden rounded-3xl bg-gray-100 aspect-[4/3] mb-8 border border-gray-100">
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10"></div>
                 <img
@@ -50,14 +54,14 @@ const Portfolio: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         <div className="mt-16 text-center md:hidden">
-          <button className="px-8 py-4 border-2 border-black rounded-full font-bold text-black hover:bg-black hover:text-white transition-colors">
+          <Link href="/case-studies" className="inline-block px-8 py-4 border-2 border-black rounded-full font-bold text-black hover:bg-black hover:text-white transition-colors">
             View All Projects
-          </button>
+          </Link>
         </div>
       </div>
     </section>

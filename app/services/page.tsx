@@ -6,7 +6,32 @@ import Footer from '../../components/Footer';
 import Team from '../../components/Team';
 import CTA from '../../components/CTA';
 
-const SERVICES_DATA = [
+interface ServiceItem {
+    title: string;
+    headline: string;
+    description: string;
+    whatWeBuild?: string[];
+    whatWeDeliver?: string[];
+    whatWeAutomate?: string[];
+    whatWeCreate?: string[];
+    whatWeAnalyze?: string[];
+    whatWeDo?: string[];
+    techStack?: Record<string, string>;
+    process?: string[];
+    approach?: string[];
+    roiFocus?: string;
+    perfectFor?: string[];
+    whyItMatters?: string;
+    whoNeedsThis?: string[];
+    deliverables?: string[];
+    growthPhilosophy?: {
+        main: string;
+        points: string[];
+    };
+    timeline?: string;
+}
+
+const SERVICES_DATA: ServiceItem[] = [
     {
         title: "Web Development",
         headline: "Build Fast. Scale Faster.",
