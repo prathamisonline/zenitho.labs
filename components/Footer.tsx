@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="col-span-2 md:col-span-1">
               <h4 className="font-black mb-6 text-sm uppercase tracking-wider">Get in touch</h4>
-              <p className="text-xl font-bold mb-2 hover:text-accent cursor-pointer transition-colors">hello@zenitholabs.com</p>
+              <p className="text-xl font-bold mb-2 hover:text-accent cursor-pointer transition-colors">sales@zenitholabs.com</p>
               <p className="text-gray-400 text-sm font-medium">San Francisco, CA</p>
             </div>
           </div>
