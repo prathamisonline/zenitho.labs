@@ -45,7 +45,7 @@ const SERVICES_DATA: ServiceItem[] = [
             "Complex data visualization platforms"
         ],
         techStack: {
-            "Frontend": "React, Next.js, Vue, modern JavaScript",
+            "Frontend": "React, Next.js, modern JavaScript",
             "Backend": "Node.js, Python, serverless architectures",
             "Databases": "PostgreSQL, MongoDB, Redis",
             "Cloud": "AWS, Vercel, custom infrastructure"
@@ -201,21 +201,21 @@ export default function ServicesPage() {
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">We don't just write code. We build businesses. Explore our comprehensive services designed to take you from idea to scale.</p>
                 </div>
 
-                <div className="px-4 max-w-7xl mx-auto grid gap-24">
+                <div className="px-4 max-w-7xl mx-auto space-y-32 ">
                     {SERVICES_DATA.map((service, index) => (
-                        <div key={index} id={service.title.toLowerCase().replace(/\s+/g, '-')} className="grid lg:grid-cols-2 gap-16 items-start scroll-mt-32 mb-16">
+                        <div key={index} id={service.title.toLowerCase().replace(/\s+/g, '-')} className="grid lg:grid-cols-2 gap-12 items-start scroll-mt-32 mb-20">
+                            {/* Left Column - Service Details */}
                             <div>
-                                <h2 className="text-4xl font-black mb-4">{service.title}</h2>
-                                <h3 className="text-2xl text-accent font-bold mb-6">{service.headline}</h3>
-                                <p className="text-lg text-gray-600 leading-relaxed mb-8">{service.description}</p>
+                                <h2 className="text-4xl font-black mb-2 text-gray-900">{service.title}</h2>
+                                <h3 className="text-2xl font-bold mb-6 text-accent">{service.headline}</h3>
+                                <p className="text-base text-gray-600 leading-relaxed mb-10">{service.description}</p>
 
                                 {service.process && (
-                                    <div className="mb-8">
-                                        <h4 className="font-bold text-black uppercase tracking-wider text-sm mb-4">Our Process</h4>
-                                        <ul className="space-y-3">
+                                    <div className="mb-10">
+                                        <h4 className="font-bold text-black uppercase tracking-wider text-xs mb-4">Our Process</h4>
+                                        <ul className="space-y-2.5">
                                             {service.process.map((item, i) => (
-                                                <li key={i} className="flex items-start gap-3 text-gray-700">
-                                                    <div className="w-1.5 h-1.5 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                                <li key={i} className="text-sm text-gray-700 leading-relaxed">
                                                     {item}
                                                 </li>
                                             ))}
@@ -224,12 +224,11 @@ export default function ServicesPage() {
                                 )}
 
                                 {service.approach && (
-                                    <div className="mb-8">
-                                        <h4 className="font-bold text-black uppercase tracking-wider text-sm mb-4">Our Approach</h4>
-                                        <ul className="space-y-3">
+                                    <div className="mb-10">
+                                        <h4 className="font-bold text-black uppercase tracking-wider text-xs mb-4">Our Approach</h4>
+                                        <ul className="space-y-2.5">
                                             {service.approach.map((item, i) => (
-                                                <li key={i} className="flex items-start gap-3 text-gray-700">
-                                                    <div className="w-1.5 h-1.5 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                                <li key={i} className="text-sm text-gray-700 leading-relaxed">
                                                     {item}
                                                 </li>
                                             ))}
@@ -238,13 +237,13 @@ export default function ServicesPage() {
                                 )}
 
                                 {service.techStack && (
-                                    <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
-                                        <h4 className="font-bold text-black uppercase tracking-wider text-sm mb-4">Our Tech Stack</h4>
-                                        <div className="space-y-3 font-medium text-sm">
+                                    <div className="mb-10">
+                                        <h4 className="font-bold text-black uppercase tracking-wider text-xs mb-4">Our Tech Stack</h4>
+                                        <div className="space-y-2">
                                             {Object.entries(service.techStack).map(([key, value]) => (
-                                                <div key={key} className="flex flex-col sm:flex-row sm:justify-between border-b border-gray-200 pb-2 last:border-0 last:pb-0">
-                                                    <span className="text-gray-500">{key}</span>
-                                                    <span className="text-black text-right">{value}</span>
+                                                <div key={key} className="text-sm">
+                                                    <span className=" font-semibold">{key} :</span>
+                                                    <span className="text-gray-700">{value}</span>
                                                 </div>
                                             ))}
                                         </div>
@@ -252,57 +251,54 @@ export default function ServicesPage() {
                                 )}
 
                                 {service.roiFocus && (
-                                    <div className="mt-8 bg-green-50 p-6 rounded-2xl border border-green-100">
-                                        <h4 className="font-bold text-green-800 uppercase tracking-wider text-xs mb-2">ROI Focus</h4>
-                                        <p className="text-green-900 font-medium leading-relaxed">{service.roiFocus}</p>
+                                    <div className="mt-8 p-5 bg-gray-50 rounded-xl border border-gray-200">
+                                        <h4 className="font-bold text-black uppercase tracking-wider text-xs mb-2">ROI Focus</h4>
+                                        <p className="text-sm text-gray-700 leading-relaxed">{service.roiFocus}</p>
                                     </div>
                                 )}
 
                                 {service.whyItMatters && (
-                                    <div className="mt-8 bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                                        <h4 className="font-bold text-blue-800 uppercase tracking-wider text-xs mb-2">Why It Matters</h4>
-                                        <p className="text-blue-900 font-medium leading-relaxed">{service.whyItMatters}</p>
+                                    <div className="mt-8 p-5 bg-gray-50 rounded-xl border border-gray-200">
+                                        <h4 className="font-bold text-black uppercase tracking-wider text-xs mb-2">Why It Matters</h4>
+                                        <p className="text-sm text-gray-700 leading-relaxed">{service.whyItMatters}</p>
                                     </div>
                                 )}
 
                                 {service.whoNeedsThis && (
                                     <div className="mt-8">
-                                        <h4 className="font-bold text-black uppercase tracking-wider text-sm mb-4">Who Needs This</h4>
+                                        <h4 className="font-bold text-black uppercase tracking-wider text-xs mb-4">Who Needs This</h4>
                                         <div className="flex flex-wrap gap-2">
                                             {service.whoNeedsThis.map((item, i) => (
-                                                <span key={i} className="bg-gray-100 px-3 py-1 rounded-full text-sm font-medium text-gray-700">{item}</span>
+                                                <span key={i} className="bg-gray-100 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-700">{item}</span>
                                             ))}
                                         </div>
                                     </div>
                                 )}
 
                                 {service.growthPhilosophy && (
-                                    <div className="mt-8 bg-gray-50 p-8 rounded-3xl">
-                                        <h4 className="font-bold text-black uppercase tracking-wider text-sm mb-4">Growth Philosophy</h4>
-                                        <p className="mb-4 font-medium">{service.growthPhilosophy.main}</p>
+                                    <div className="mt-10">
+                                        <h4 className="font-bold text-black uppercase tracking-wider text-xs mb-3">Growth Philosophy</h4>
+                                        <p className="mb-4 font-medium text-sm text-gray-900">{service.growthPhilosophy.main}</p>
                                         <ul className="space-y-2">
                                             {service.growthPhilosophy.points.map((p, i) => (
-                                                <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
-                                                    <span className="text-accent font-bold">→</span> {p}
+                                                <li key={i} className="text-sm text-gray-600 leading-relaxed">
+                                                    {p}
                                                 </li>
                                             ))}
                                         </ul>
-                                        <div className="mt-6 pt-6 border-t border-gray-200">
-                                            <span className="font-bold text-xs uppercase tracking-wider text-gray-400">Timeline Impact</span>
-                                            <p className="mt-2 text-sm font-medium">{service.timeline}</p>
-                                        </div>
+                                        {service.timeline && (
+                                            <div className="mt-6 pt-4 border-t border-gray-200">
+                                                <span className="font-bold text-xs uppercase tracking-wider text-gray-500">Timeline Impact</span>
+                                                <p className="mt-2 text-sm text-gray-700">{service.timeline}</p>
+                                            </div>
+                                        )}
                                     </div>
                                 )}
                             </div>
 
-                            <div className={`text-white p-10 rounded-2xl shadow-lg relative overflow-hidden ${index === 0 ? 'bg-blue-600' :
-                                index === 1 ? 'bg-indigo-600' :
-                                    index === 2 ? 'bg-teal-600' :
-                                        index === 3 ? 'bg-emerald-600' :
-                                            index === 4 ? 'bg-orange-600' :
-                                                'bg-rose-600'
-                                }`}>
-                                <h4 className="font-bold text-white uppercase tracking-wider text-sm mb-8 bg-white/20 px-4 py-2 rounded-full inline-block">
+                            {/* Right Column - Black Card */}
+                            <div className="bg-black text-white p-8 rounded-3xl sticky top-32">
+                                <h4 className="font-bold text-accent uppercase tracking-wider text-xs mb-6">
                                     {service.whatWeBuild ? "What We Build" :
                                         service.whatWeDeliver ? "What We Deliver" :
                                             service.whatWeAutomate ? "What We Automate" :
@@ -311,19 +307,20 @@ export default function ServicesPage() {
                                 </h4>
                                 <ul className="space-y-4">
                                     {(service.whatWeBuild || service.whatWeDeliver || service.whatWeAutomate || service.whatWeCreate || service.whatWeAnalyze || service.whatWeDo)?.map((item, i) => (
-                                        <li key={i} className="flex items-start gap-4 text-base font-medium border-b border-white/10 pb-4 last:border-0 last:pb-0">
-                                            <span className="text-white flex-shrink-0 mt-1 bg-white/20 w-6 h-6 rounded-full flex items-center justify-center text-sm">✓</span> {item}
+                                        <li key={i} className="flex items-start gap-3 text-white text-sm leading-relaxed">
+                                            <span className="flex-shrink-0 mt-1">•</span>
+                                            <span>{item}</span>
                                         </li>
                                     ))}
                                 </ul>
 
                                 {service.perfectFor && (
-                                    <div className="mt-10 pt-6 border-t border-white/20">
+                                    <div className="mt-8 pt-8 border-t border-white/10">
                                         <h4 className="font-bold text-white uppercase tracking-wider text-xs mb-4">Perfect For</h4>
-                                        <ul className="space-y-2">
+                                        <ul className="space-y-2.5">
                                             {service.perfectFor.map((item, i) => (
-                                                <li key={i} className="text-white/90 text-sm flex items-start gap-2">
-                                                    <span className="text-white">✓</span> {item}
+                                                <li key={i} className="text-white/80 text-sm flex items-start gap-2">
+                                                    <span className="flex-shrink-0">•</span> {item}
                                                 </li>
                                             ))}
                                         </ul>
@@ -331,12 +328,12 @@ export default function ServicesPage() {
                                 )}
 
                                 {service.deliverables && (
-                                    <div className="mt-10 pt-6 border-t border-white/20">
+                                    <div className="mt-8 pt-8 border-t border-white/10">
                                         <h4 className="font-bold text-white uppercase tracking-wider text-xs mb-4">Key Deliverables</h4>
-                                        <ul className="space-y-2">
+                                        <ul className="space-y-2.5">
                                             {service.deliverables.map((item, i) => (
-                                                <li key={i} className="text-white/90 text-sm flex items-start gap-2">
-                                                    <span className="text-white">✓</span> {item}
+                                                <li key={i} className="text-white/80 text-sm flex items-start gap-2">
+                                                    <span className="flex-shrink-0">•</span> {item}
                                                 </li>
                                             ))}
                                         </ul>
