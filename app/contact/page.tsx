@@ -15,7 +15,7 @@ function ContactSubmitButton() {
         <button
             type="submit"
             disabled={pending}
-            className="w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-gray-800 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100 flex items-center justify-center gap-2"
+            className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100 flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20"
         >
             {pending ? (
                 <>
@@ -38,9 +38,9 @@ export default function ContactPage() {
 
                 {/* Header */}
                 <div className="px-4 max-w-7xl mx-auto mb-16 text-center">
-                    <span className="text-black font-bold tracking-wider uppercase text-sm border border-black rounded-full px-3 py-1 bg-white mb-6 inline-block">Contact Us</span>
-                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6">Let's Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">Amazing Together</span></h1>
-                    <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+                    <span className="text-blue-600 font-bold tracking-wider uppercase text-sm border-2 border-blue-100 rounded-full px-4 py-1.5 bg-blue-50 mb-6 inline-block">Contact Us</span>
+                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6">Let's Build Something <span className="text-blue-600">Amazing Together</span></h1>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
                         Whether you're a solopreneur with a brilliant idea or a company ready to scale, we'd love to hear from you.
                     </p>
                 </div>
@@ -49,52 +49,55 @@ export default function ContactPage() {
                     <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
 
                         {/* Contact Options */}
-                        <div className="space-y-12">
-                            <div className="bg-gray-50 p-8 rounded-[2.5rem] border border-gray-100">
-                                <div className="space-y-8">
-                                    <div className="flex items-start gap-6">
-                                        <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm text-black flex-shrink-0">
+                        <div className="space-y-6">
+                            <div className="bg-white p-8 rounded-2xl border-2 border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                                <div className="space-y-6">
+                                    <div className="flex items-start gap-5">
+                                        <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
                                             <Mail size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-lg mb-1">Email Us</h3>
-                                            <a href="mailto:sales@zenitholabs.com" className="text-gray-600 hover:text-black transition-colors text-lg">sales@zenitholabs.com</a>
+                                            <h3 className="font-bold text-lg mb-1 text-gray-900">Email Us</h3>
+                                            <a href="mailto:sales@zenitholabs.com" className="text-gray-600 hover:text-blue-600 transition-colors text-base">sales@zenitholabs.com</a>
                                         </div>
                                     </div>
 
-                                    <div className="flex items-start gap-6">
-                                        <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm text-black flex-shrink-0">
+                                    <div className="h-px bg-gray-200"></div>
+
+                                    <div className="flex items-start gap-5">
+                                        <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
                                             <Phone size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-lg mb-1">Call Us</h3>
-                                            <a href="tel:+919680018108" className="text-gray-600 hover:text-black transition-colors text-lg">+91-9680018108</a>
+                                            <h3 className="font-bold text-lg mb-1 text-gray-900">Call Us</h3>
+                                            <a href="tel:+919680018108" className="text-gray-600 hover:text-blue-600 transition-colors text-base">+91-9680018108</a>
                                         </div>
                                     </div>
 
-                                    <div className="flex items-start gap-6">
-                                        <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm text-black flex-shrink-0">
+                                    <div className="h-px bg-gray-200"></div>
+
+                                    <div className="flex items-start gap-5">
+                                        <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
                                             <Calendar size={24} />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-lg mb-1">Book a Discovery Call</h3>
-                                            <p className="text-gray-500 text-sm mb-3">30-minute free consultation to discuss your project.</p>
-                                            <a href="https://calendly.com/" target="_blank" className="font-bold underline underline-offset-4 decoration-2 hover:text-accent transition-colors">Schedule now</a>
+                                            <h3 className="font-bold text-lg mb-1 text-gray-900">Book a Discovery Call</h3>
+                                            <p className="text-gray-600 text-sm mb-3">30-minute free consultation to discuss your project.</p>
+                                            <a href="https://calendly.com/" target="_blank" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">Schedule now <ArrowRight size={16} /></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="bg-black text-white p-8 rounded-[2.5rem] relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-accent rounded-full blur-[60px] opacity-20"></div>
-                                <h3 className="font-bold text-xl mb-4 relative z-10">Use Our Process?</h3>
-                                <p className="text-gray-400 mb-6 relative z-10">Check out our detailed workflows and see how we can bring your vision to life with speed and precision.</p>
-                                <a href="/services" className="inline-flex items-center gap-2 text-accent font-bold hover:gap-3 transition-all">Explore Services <ArrowRight size={16} /></a>
+                            <div className="bg-slate-900 text-white p-8 rounded-2xl border border-slate-800">
+                                <h3 className="font-bold text-xl mb-3 text-white">Our Services</h3>
+                                <p className="text-slate-300 mb-6 leading-relaxed">Check out our detailed workflows and see how we can bring your vision to life with speed and precision.</p>
+                                <a href="/services" className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all">Explore Services <ArrowRight size={16} /></a>
                             </div>
                         </div>
 
                         {/* Form */}
-                        <div className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-gray-100 shadow-2xl">
+                        <div className="bg-white p-8 md:p-12 rounded-2xl border-2 border-gray-200 shadow-lg">
                             {state.success ? (
                                 <div className="h-full flex flex-col items-center justify-center text-center py-20">
                                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-6">
