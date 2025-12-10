@@ -39,7 +39,7 @@ export default function ContactPage() {
                 {/* Header */}
                 <div className="px-4 max-w-7xl mx-auto mb-16 text-center">
                     <span className="text-black font-bold tracking-wider uppercase text-sm border border-black rounded-full px-3 py-1 bg-white mb-6 inline-block">Contact Us</span>
-                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6">Let's Build Something Amazing Together</h1>
+                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6">Let's Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">Amazing Together</span></h1>
                     <p className="text-xl text-gray-500 max-w-2xl mx-auto">
                         Whether you're a solopreneur with a brilliant idea or a company ready to scale, we'd love to hear from you.
                     </p>

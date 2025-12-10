@@ -10,7 +10,7 @@ const CTA: React.FC = () => {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter">
-          Ready to <span className="text-accent italic">transform</span><br /> your business?
+          Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">transform</span><br /> your business?
         </h2>
         <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-medium">
           Join innovative teams that have accelerated their growth with Zenitho Labs. Your success story starts with a simple chat.

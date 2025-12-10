@@ -31,7 +31,7 @@ const InteractiveProducts: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <span className="text-black font-bold tracking-wider uppercase text-sm border border-black rounded-full px-3 py-1 bg-white">Playground</span>
-                    <h2 className="mt-6 text-4xl md:text-5xl font-black text-black">Experience Our Work—Play Around</h2>
+                    <h2 className="mt-6 text-4xl md:text-5xl font-black text-black">Experience Our Work—<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">Play Around</span></h2>
                     <p className="mt-6 text-xl text-gray-500 max-w-2xl mx-auto">
                         Don't just read about what we build—experience it. Here are live products we've developed that you can explore right now.
                     </p>

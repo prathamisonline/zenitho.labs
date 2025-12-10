@@ -28,7 +28,7 @@ export default function CaseStudiesPage() {
                 {/* Header */}
                 <div className="px-4 max-w-7xl mx-auto mb-16 text-center">
                     <span className="text-black font-bold tracking-wider uppercase text-sm border border-black rounded-full px-3 py-1 bg-white mb-6 inline-block">Case Studies</span>
-                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6">Real Projects. Real Results. Real Impact.</h1>
+                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6">Real Projects. Real Results. <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">Real Impact.</span></h1>
                     <p className="text-xl text-gray-500 max-w-3xl mx-auto">Explore how we've partnered with ambitious teams to transform visions into thriving digital products. Each case study showcases our end-to-end approach—from strategic analysis to successful deployment and growth.</p>
                 </div>
 

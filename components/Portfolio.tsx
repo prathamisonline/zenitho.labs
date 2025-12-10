@@ -9,7 +9,7 @@ const Portfolio: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <div className="max-w-3xl">
             <span className="text-black font-bold tracking-wider uppercase text-sm border border-black rounded-full px-3 py-1">Case Studies</span>
-            <h2 className="mt-6 text-5xl md:text-6xl font-black text-black tracking-tight">Trusted by Ambitious Teams</h2>
+            <h2 className="mt-6 text-5xl md:text-6xl font-black text-black tracking-tight">Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">Ambitious Teams</span></h2>
             <p className="mt-6 text-xl text-gray-500 max-w-xl">
               We've had the privilege of partnering with innovative companies across industries.
             </p>

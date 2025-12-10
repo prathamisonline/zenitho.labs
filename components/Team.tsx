@@ -25,7 +25,7 @@ const Team: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="text-accent font-bold tracking-wider uppercase text-sm border border-black rounded-full px-3 py-1 bg-black">Our Team</span>
-                    <h2 className="mt-6 text-4xl md:text-5xl font-black text-black tracking-tight">Meet Your New Product Team</h2>
+                    <h2 className="mt-6 text-4xl md:text-5xl font-black text-black tracking-tight">Meet Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">New Product Team</span></h2>
                     <p className="mt-6 text-xl text-gray-500">
                         We're not a traditional agency. We're a hybrid team that thinks like founders, builds like engineers, and optimizes like growth hackers.
                     </p>

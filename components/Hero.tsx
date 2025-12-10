@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-black tracking-tighter leading-[1] mb-8"
           >
             From Vision to Scale <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 italic pr-4 pb-2 box-decoration-clone">We Build Your Digital Future</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 pr-4 pb-2 box-decoration-clone">We Build Your Digital Future</span>
           </motion.h1>
 
           <motion.p

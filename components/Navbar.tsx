@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
     { name: 'Services', href: '/services' },
     { name: 'Blogs', href: '/blogs' },
     { name: 'Contact Us', href: '/contact' },
-    { name: 'AFFILIATE PROGRAM', href: '/affiliate' },
+    { name: 'Affiliate Program', href: '/affiliate' },
   ];
 
   return (

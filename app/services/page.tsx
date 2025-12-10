@@ -197,7 +197,7 @@ export default function ServicesPage() {
             <div className="min-h-screen pt-32 pb-20">
                 <div className="px-4 max-w-7xl mx-auto mb-20 text-center">
                     <span className="text-black font-bold tracking-wider uppercase text-sm border border-black rounded-full px-3 py-1 bg-white mb-6 inline-block">Our Expertise</span>
-                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6">Expertise honed by shipping real products.</h1>
+                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6">Expertise honed by shipping <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">real products</span>.</h1>
                     <p className="text-xl text-gray-500 max-w-3xl mx-auto">We don't just write code. We build businesses. Explore our comprehensive services designed to take you from idea to scale.</p>
                 </div>
 
@@ -295,9 +295,15 @@ export default function ServicesPage() {
                                 )}
                             </div>
 
-                            <div className="bg-black text-white p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-accent rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
-                                <h4 className="font-bold text-accent uppercase tracking-wider text-sm mb-8 relative z-10">
+                            <div className={`text-white p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden ${index === 0 ? 'bg-gradient-to-br from-purple-600 to-pink-500' :
+                                    index === 1 ? 'bg-gradient-to-br from-pink-500 to-purple-600' :
+                                        index === 2 ? 'bg-gradient-to-br from-purple-700 to-pink-600' :
+                                            index === 3 ? 'bg-gradient-to-br from-fuchsia-600 to-purple-600' :
+                                                index === 4 ? 'bg-gradient-to-br from-purple-600 to-fuchsia-500' :
+                                                    'bg-gradient-to-br from-pink-600 to-purple-700'
+                                }`}>
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+                                <h4 className="font-bold text-white uppercase tracking-wider text-sm mb-8 relative z-10 bg-white/20 px-4 py-2 rounded-full inline-block">
                                     {service.whatWeBuild ? "What We Build" :
                                         service.whatWeDeliver ? "What We Deliver" :
                                             service.whatWeAutomate ? "What We Automate" :
@@ -307,18 +313,18 @@ export default function ServicesPage() {
                                 <ul className="space-y-4 relative z-10">
                                     {(service.whatWeBuild || service.whatWeDeliver || service.whatWeAutomate || service.whatWeCreate || service.whatWeAnalyze || service.whatWeDo)?.map((item, i) => (
                                         <li key={i} className="flex items-start gap-4 text-lg font-medium border-b border-white/10 pb-4 last:border-0 last:pb-0">
-                                            <span className="text-accent flex-shrink-0 mt-1">●</span> {item}
+                                            <span className="text-white flex-shrink-0 mt-1 bg-white/20 w-6 h-6 rounded-full flex items-center justify-center text-sm">✓</span> {item}
                                         </li>
                                     ))}
                                 </ul>
 
                                 {service.perfectFor && (
                                     <div className="mt-12 pt-8 border-t border-white/20">
-                                        <h4 className="font-bold text-white/50 uppercase tracking-wider text-xs mb-4">Perfect For</h4>
+                                        <h4 className="font-bold text-white uppercase tracking-wider text-xs mb-4">Perfect For</h4>
                                         <ul className="space-y-2">
                                             {service.perfectFor.map((item, i) => (
-                                                <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
-                                                    <span className="text-accent">✓</span> {item}
+                                                <li key={i} className="text-white/90 text-sm flex items-start gap-2">
+                                                    <span className="text-white">✓</span> {item}
                                                 </li>
                                             ))}
                                         </ul>
@@ -327,11 +333,11 @@ export default function ServicesPage() {
 
                                 {service.deliverables && (
                                     <div className="mt-12 pt-8 border-t border-white/20">
-                                        <h4 className="font-bold text-white/50 uppercase tracking-wider text-xs mb-4">Key Deliverables</h4>
+                                        <h4 className="font-bold text-white uppercase tracking-wider text-xs mb-4">Key Deliverables</h4>
                                         <ul className="space-y-2">
                                             {service.deliverables.map((item, i) => (
-                                                <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
-                                                    <span className="text-accent">✓</span> {item}
+                                                <li key={i} className="text-white/90 text-sm flex items-start gap-2">
+                                                    <span className="text-white">✓</span> {item}
                                                 </li>
                                             ))}
                                         </ul>

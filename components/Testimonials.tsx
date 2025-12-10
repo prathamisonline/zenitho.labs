@@ -8,7 +8,7 @@ const Testimonials: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="text-black font-bold tracking-wider uppercase text-sm border border-black rounded-full px-3 py-1 bg-white">Testimonials</span>
-          <h2 className="mt-6 text-4xl font-black text-black">What Our Partners Say</h2>
+          <h2 className="mt-6 text-4xl font-black text-black">What <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">Our Partners</span> Say</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

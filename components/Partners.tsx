@@ -4,7 +4,7 @@ const Partners: React.FC = () => {
     return (
         <section className="py-20 bg-white border-t border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-2xl font-bold text-gray-900 mb-12 uppercase tracking-widest">Powered By Partnership</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-12 uppercase tracking-widest">Powered By <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 normal-case">Partnership</span></h2>
 
                 <div className="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
                     {/* Marchain.io */}
