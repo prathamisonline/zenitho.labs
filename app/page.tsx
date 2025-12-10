@@ -27,11 +27,11 @@ export default function Home() {
     <div className="bg-white text-gray-900 font-sans selection:bg-accent selection:text-black">
       <Navbar onOpenContact={openContact} />
       <Hero onOpenContact={openContact} />
+      <Stats />
       <Services />
       <Process />
       <Portfolio />
       <Team />
-      <Stats />
       <Testimonials />
       <InteractiveProducts />
       <Partners />

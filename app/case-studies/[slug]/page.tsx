@@ -23,7 +23,7 @@ export default function CaseStudyDetail() {
             <div className="pt-32 pb-20">
 
                 {/* Hero Header */}
-                <div className="px-4 max-w-5xl mx-auto mb-12">
+                <div className="px-4 max-w-7xl mx-auto mb-12">
                     <Link href="/case-studies" className="inline-flex items-center gap-2 text-gray-500 hover:text-black font-medium mb-8 transition-colors">
                         <ArrowLeft size={16} /> Back to Case Studies
                     </Link>

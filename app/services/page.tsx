@@ -196,9 +196,9 @@ export default function ServicesPage() {
             <Navbar />
             <div className="min-h-screen pt-32 pb-20">
                 <div className="px-4 max-w-7xl mx-auto mb-20 text-center">
-                    <span className="text-black font-bold tracking-wider uppercase text-sm border border-black rounded-full px-3 py-1 bg-white mb-6 inline-block">Our Expertise</span>
-                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6">Expertise honed by shipping <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500">real products</span>.</h1>
-                    <p className="text-xl text-gray-500 max-w-3xl mx-auto">We don't just write code. We build businesses. Explore our comprehensive services designed to take you from idea to scale.</p>
+                    <span className="text-blue-600 font-bold tracking-wider uppercase text-sm border-2 border-blue-100 rounded-full px-4 py-1.5 bg-blue-50 mb-6 inline-block">Our Expertise</span>
+                    <h1 className="text-5xl md:text-7xl font-black text-black mb-6">Expertise honed by shipping <span className="text-black">real products</span>.</h1>
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">We don't just write code. We build businesses. Explore our comprehensive services designed to take you from idea to scale.</p>
                 </div>
 
                 <div className="px-4 max-w-7xl mx-auto grid gap-24">
@@ -295,31 +295,30 @@ export default function ServicesPage() {
                                 )}
                             </div>
 
-                            <div className={`text-white p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden ${index === 0 ? 'bg-gradient-to-br from-purple-600 to-pink-500' :
-                                    index === 1 ? 'bg-gradient-to-br from-pink-500 to-purple-600' :
-                                        index === 2 ? 'bg-gradient-to-br from-purple-700 to-pink-600' :
-                                            index === 3 ? 'bg-gradient-to-br from-fuchsia-600 to-purple-600' :
-                                                index === 4 ? 'bg-gradient-to-br from-purple-600 to-fuchsia-500' :
-                                                    'bg-gradient-to-br from-pink-600 to-purple-700'
+                            <div className={`text-white p-10 rounded-2xl shadow-lg relative overflow-hidden ${index === 0 ? 'bg-blue-600' :
+                                index === 1 ? 'bg-indigo-600' :
+                                    index === 2 ? 'bg-teal-600' :
+                                        index === 3 ? 'bg-emerald-600' :
+                                            index === 4 ? 'bg-orange-600' :
+                                                'bg-rose-600'
                                 }`}>
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
-                                <h4 className="font-bold text-white uppercase tracking-wider text-sm mb-8 relative z-10 bg-white/20 px-4 py-2 rounded-full inline-block">
+                                <h4 className="font-bold text-white uppercase tracking-wider text-sm mb-8 bg-white/20 px-4 py-2 rounded-full inline-block">
                                     {service.whatWeBuild ? "What We Build" :
                                         service.whatWeDeliver ? "What We Deliver" :
                                             service.whatWeAutomate ? "What We Automate" :
                                                 service.whatWeCreate ? "What We Create" :
                                                     service.whatWeAnalyze ? "What We Analyze" : "What We Do"}
                                 </h4>
-                                <ul className="space-y-4 relative z-10">
+                                <ul className="space-y-4">
                                     {(service.whatWeBuild || service.whatWeDeliver || service.whatWeAutomate || service.whatWeCreate || service.whatWeAnalyze || service.whatWeDo)?.map((item, i) => (
-                                        <li key={i} className="flex items-start gap-4 text-lg font-medium border-b border-white/10 pb-4 last:border-0 last:pb-0">
+                                        <li key={i} className="flex items-start gap-4 text-base font-medium border-b border-white/10 pb-4 last:border-0 last:pb-0">
                                             <span className="text-white flex-shrink-0 mt-1 bg-white/20 w-6 h-6 rounded-full flex items-center justify-center text-sm">✓</span> {item}
                                         </li>
                                     ))}
                                 </ul>
 
                                 {service.perfectFor && (
-                                    <div className="mt-12 pt-8 border-t border-white/20">
+                                    <div className="mt-10 pt-6 border-t border-white/20">
                                         <h4 className="font-bold text-white uppercase tracking-wider text-xs mb-4">Perfect For</h4>
                                         <ul className="space-y-2">
                                             {service.perfectFor.map((item, i) => (
@@ -332,7 +331,7 @@ export default function ServicesPage() {
                                 )}
 
                                 {service.deliverables && (
-                                    <div className="mt-12 pt-8 border-t border-white/20">
+                                    <div className="mt-10 pt-6 border-t border-white/20">
                                         <h4 className="font-bold text-white uppercase tracking-wider text-xs mb-4">Key Deliverables</h4>
                                         <ul className="space-y-2">
                                             {service.deliverables.map((item, i) => (
